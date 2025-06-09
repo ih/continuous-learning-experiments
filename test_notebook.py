@@ -14,7 +14,7 @@ def install_dependencies():
         print(f"Error installing dependencies: {e}")
         sys.exit(1)
 
-def run_notebook(notebook_filename="mnist_cnn.ipynb"):
+def run_notebook(notebook_filename="image_classification_cnn.ipynb"):
     print(f"Attempting to execute notebook: {notebook_filename}")
     try:
         with open(notebook_filename, 'r', encoding='utf-8') as f:
@@ -57,7 +57,7 @@ def run_notebook(notebook_filename="mnist_cnn.ipynb"):
 
 if __name__ == "__main__":
     install_dependencies()
-    success, error = run_notebook("mnist_cnn.ipynb")
+    success, error = run_notebook("image_classification_cnn.ipynb")
     if success:
         print("Notebook execution test PASSED.")
     else:
